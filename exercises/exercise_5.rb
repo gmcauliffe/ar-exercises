@@ -12,3 +12,7 @@ puts "----------"
 puts "Total company annual revenue = #{@total_revenue}"
 @avg_annual_revenue = Store.average(:annual_revenue)
 puts "Company average annual revenue = #{@avg_annual_revenue}"
+
+@stores1m = Store.where("annual_revenue > ?", 1000000)
+
+puts "#{@stores1m} stores are generating $1M or more in annual sales."
