@@ -15,4 +15,4 @@ puts "Company average annual revenue = #{@avg_annual_revenue}"
 
 @stores1m = Store.where("annual_revenue > ?", 1000000)
 
-puts "#{@stores1m} stores are generating $1M or more in annual sales."
+puts "#{@stores1m.count} stores are generating $1M or more in annual sales."
